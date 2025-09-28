@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Injex.Extensions\Injex.Extensions.csproj" />
     <ProjectReference Include="..\..\src\Injex\Injex.csproj" />
   </ItemGroup>
 
