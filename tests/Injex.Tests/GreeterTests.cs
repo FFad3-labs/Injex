@@ -1,4 +1,4 @@
-﻿namespace ProjectName.Tests;
+﻿namespace Injex.Tests;
 
 public class GreeterTests
 {

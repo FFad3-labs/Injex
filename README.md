@@ -1,7 +1,8 @@
-# dotnet-lib-template
+# Injex
 
-A clean and minimal **template repository** for .NET libraries.  
-It provides a consistent project structure, CI/CD setup, and build configuration, so you can quickly start new libraries without repeating boilerplate.
+Injex is a lightweight dependency injection container designed for developers who want to
+understand how DI works under the hood. It’s minimal,
+fast, and perfect as both a learning resource and a foundation for small projects.
 
 ---
 
@@ -14,11 +15,15 @@ It provides a consistent project structure, CI/CD setup, and build configuration
 
 ---
 
-## 🚀 Getting Started
+## 🗺️ Roadmap
 
-1. Click **Use this template** on GitHub.
-2. Create a new repository for your library (e.g., `my-library`).
-3. Clone the new repository locally:
-   ```bash
-   git clone https://github.com/<your-org>/<your-repo>.git
-   cd <your-repo>
+- [ ] **Service Registration**
+    - Be able to register services into a service collection (by type, factory, or instance).
+- [ ] **Container Creation**
+    - Build a container/service provider based on the service collection.
+- [ ] **Simple Resolution**
+    - Retrieve a service without dependencies from the container.
+- [ ] **Constructor Injection**
+    - Retrieve a service with dependencies automatically provided by the container.
+---
+## 🚀 Getting Started

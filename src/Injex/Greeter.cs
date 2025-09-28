@@ -1,4 +1,4 @@
-﻿namespace ProjectName;
+﻿namespace Injex;
 
 public static class Greeter
 {

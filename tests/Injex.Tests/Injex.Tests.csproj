@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ProjectName\ProjectName.csproj" />
+    <ProjectReference Include="..\..\src\Injex\Injex.csproj" />
   </ItemGroup>
 
 </Project>
