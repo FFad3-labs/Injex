@@ -5,6 +5,7 @@ namespace Injex;
 internal class Container : IContainer
 {
     private readonly List<ServiceDescriptor> _descriptors;
+    
     public Container(IEnumerable<ServiceDescriptor> descriptors)
     {
         _descriptors = descriptors.ToList();
@@ -12,11 +13,13 @@ internal class Container : IContainer
 
     public object? GetService(Type serviceType)
     {
-        var descriptor = _descriptors.FirstOrDefault(d => d.ServiceType == serviceType);
-        
-        if(descriptor is null)
+        var descriptor = _descriptors.LastOrDefault(d => d.ServiceType == serviceType);
+
+        if (descriptor is null)
             return null;
-        
-        return Activator.CreateInstance(descriptor!.ImplementationType);
+
+        var impl = descriptor.ImplementationType;
+        var factory = ServiceFactoryBuilder.BuildFor(impl);
+        return factory(this);
     }
 }

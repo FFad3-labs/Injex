@@ -19,11 +19,11 @@ fast, and perfect as both a learning resource and a foundation for small project
 
 - [ ] **Service Registration**
     - Be able to register services into a service collection (by type, factory, or instance).
-- [ ] **Container Creation**
+- [X] **Container Creation**
     - Build a container/service provider based on the service collection.
-- [ ] **Simple Resolution**
+- [X] **Simple Resolution**
     - Retrieve a service without dependencies from the container.
-- [ ] **Constructor Injection**
+- [X] **Constructor Injection**
     - Retrieve a service with dependencies automatically provided by the container.
 ---
 ## 🚀 Getting Started
