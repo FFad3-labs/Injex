@@ -1,21 +1,20 @@
 ﻿using System.Reflection;
-using Injex.Abstractions;
 
 namespace Injex;
 
 internal static class ServiceFactoryBuilder
 {
-    public static Func<IContainer, object> BuildFor(Type implementationType)
+    public static Func<Func<Type,object?>, object> BuildFor(Type implementationType)
     {
         var ctorInfo = GetConstructor(implementationType);
         var paramsTypes = ctorInfo.GetParameters().Select(x => x.ParameterType).ToArray();
 
-        return sp =>
+        return resolve =>
         {
             var args = new object[paramsTypes.Length];
             for (var i = 0; i < paramsTypes.Length; i++)
             {
-                args[i] = sp.GetService(paramsTypes[i]) ??
+                args[i] = resolve(paramsTypes[i]) ??
                           throw new Exception($"Service factory builder returned null for {paramsTypes[i]}");
             }
 

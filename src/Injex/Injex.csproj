@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Injex.Abstractions\Injex.Abstractions.csproj" />
+    <InternalsVisibleTo Include="Injex.Tests" />
   </ItemGroup>
 
 </Project>

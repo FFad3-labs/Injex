@@ -25,5 +25,7 @@ fast, and perfect as both a learning resource and a foundation for small project
     - Retrieve a service without dependencies from the container.
 - [X] **Constructor Injection**
     - Retrieve a service with dependencies automatically provided by the container.
+- [X] **Cycle detection**
+  - Detect circular dependencies during resolution and throw a clear exception with the full dependency path.
 ---
 ## 🚀 Getting Started
